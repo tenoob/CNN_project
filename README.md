@@ -1,1 +1,1 @@
-#CNN project
+#CNN project v2
