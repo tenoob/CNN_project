@@ -32,39 +32,24 @@ def read_yaml(file_path:Path) -> ConfigBox:
     except Exception as e:
         raise e
 
-    @ensure_annotations
-    def create_directories(path_to_directories:list,verbose=True):
-        """
-        Create list of directories
-
-        Args:
-            path_to_directories (list): list of path of directories
-            ignore_log(bool,optional): ignore if multiple dirs is to be created. Defaults to false
-        """
-        for path in path_to_directories:
-            os.makedirs(path,exist_ok=True)
-            if verbose:
-                logger.info(f"created directory at: {path}")
-
-
-    @ensure_annotations
-    def save_json(path:Path , data: dict):
-        """
+@ensure_annotations
+def save_json(path:Path , data: dict):
+    """
         Save json data
 
         Args:
             path(Path): path to json file
             data(dict): data to be saved in json file
-        """ 
-        with open(path,"w") as f:
-            json.dump(data,f,indent=4)
+    """ 
+    with open(path,"w") as f:
+        json.dump(data,f,indent=4)
 
-        logger.info(f"json file saved at: {path}")
+    logger.info(f"json file saved at: {path}")
 
     
-    @ensure_annotations
-    def load_json(path:Path) -> ConfigBox:
-        """
+@ensure_annotations
+def load_json(path:Path) -> ConfigBox:
+    """
         load json files data
 
         Args:
@@ -72,30 +57,30 @@ def read_yaml(file_path:Path) -> ConfigBox:
         
         Return:
             ConfigBox: data as class arrtibutes instead of dict
-        """
-        with open(path) as f:
-            content = json.load(f)
+    """
+    with open(path) as f:
+        content = json.load(f)
 
-        logger.info(f"json file loaded successfully from: {path}")
-        return ConfigBox(content)
+    logger.info(f"json file loaded successfully from: {path}")
+    return ConfigBox(content)
 
 
-    @ensure_annotations
-    def save_bin(data:Any , path:Path):
-        """
+@ensure_annotations
+def save_bin(data:Any , path:Path):
+    """
         save binary file
 
         Args:
             data(Any): data to be saved as binary
             path(Path): path to binary file
-        """
-        joblib.dump(value=data,filename=path)
-        logger.info(f"binary file saved at: {path}")
+    """
+    joblib.dump(value=data,filename=path)
+    logger.info(f"binary file saved at: {path}")
 
     
-    @ensure_annotations
-    def load_bin(path:Path) -> Any:
-        """
+@ensure_annotations
+def load_bin(path:Path) -> Any:
+    """
         load binary data
 
         Args:
@@ -103,14 +88,14 @@ def read_yaml(file_path:Path) -> ConfigBox:
 
         Returns:
             Any: object stored in the file
-        """
-        data = joblib.load(data)
-        logger.info(f"binary file loaded from: {path}")
-        return data
+    """
+    data = joblib.load(data)
+    logger.info(f"binary file loaded from: {path}")
+    return data
 
-    @ensure_annotations
-    def get_size(path:Path) -> str:
-        """
+@ensure_annotations
+def get_size(path:Path) -> str:
+    """
         get size in KB
 
         Args:
@@ -118,7 +103,22 @@ def read_yaml(file_path:Path) -> ConfigBox:
 
         Returns:
             str: size in KB
-        """
-        size_in_kb = round(os.path.getsize(path)/1024)
-        return f"~ {size_in_kb} KB"
+    """
+    size_in_kb = round(os.path.getsize(path)/1024)
+    return f"~ {size_in_kb} KB"
+
+
+@ensure_annotations
+def create_directories(path_to_directories:list,verbose=True):
+    """
+        Create list of directories
+
+        Args:
+            path_to_directories (list): list of path of directories
+            ignore_log(bool,optional): ignore if multiple dirs is to be created. Defaults to false
+    """
+    for path in path_to_directories:
+        os.makedirs(path,exist_ok=True)
+        if verbose:
+            logger.info(f"created directory at: {path}")
 
