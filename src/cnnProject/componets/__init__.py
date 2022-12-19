@@ -1,0 +1,1 @@
+from cnnProject.componets.data_ingestion import DataIngestion

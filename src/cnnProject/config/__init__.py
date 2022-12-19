@@ -1,0 +1,1 @@
+from cnnProject.config.configration import ConfigrationManger
