@@ -1,6 +1,11 @@
 #CNN project
 python 3.7
 dlenv
+commands 
+    - for settingup test env (bash init_setup.sh)
+    - to run pytest (pytest -v)
+    - to run tox.ini (tox)
+    - to rerun tox if new packages are added to requirements (tox --recreate)
 
 
 ##workflow
