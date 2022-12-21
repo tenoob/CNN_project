@@ -2,7 +2,8 @@ from cnnProject.config import ConfigrationManger
 from cnnProject.componets import DataIngestion
 from cnnProject import logger
 
-STAGE_NAME = 'Data Ingestion Stage'
+STAGE_NAME = "Data Ingestion Stage"
+
 
 def main():
     config = ConfigrationManger()
@@ -12,7 +13,7 @@ def main():
     data_ingestion.unzip_and_clean()
 
 
-if __name__=='__main__':
+if __name__ == "__main__":
     try:
         logger.info(f"\n\n{'*'*10}stage {STAGE_NAME} started {'*'*10}")
         main()
