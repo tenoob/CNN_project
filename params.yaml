@@ -1,1 +1,8 @@
-key: value
+AUGMENTAION: True
+IMAGE_SIZE: [224,224,3] #As per VGG16 model
+BATCH_SIZE: 10
+INCLUDE_TOP: False
+EPOCHS: 1
+CLASSES:  2    #DOG AND CAT
+WEIGHTS: imagenet     #calling trained weights on the imagenet dataset
+LEARNING_RATE: 0.01
