@@ -13,6 +13,11 @@ base_model_preparation:
   updated_base_model_path: artifacts/base_model_preparation/base_model_updated.h5
   
 callback_preparation:
-  root_die: artifacts/callback_preparation
+  root_dir: artifacts/callback_preparation
   tensorboard_root_log_dir: artifacts/callback_preparation/tensorboard_log_dir
   checkpoint_model_filepath: artifacts/callback_preparation/checkpoint_dir/model.h5
+
+
+training:
+  root_dir: artifacts/training
+  trained_model_path: artifacts/training/model.h5
