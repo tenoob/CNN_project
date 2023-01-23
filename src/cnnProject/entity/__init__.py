@@ -1,1 +1,1 @@
-from cnnProject.entity.config_entity import DataIngestionConfig,BaseModelPreparationConfig
+from cnnProject.entity.config_entity import DataIngestionConfig,BaseModelPreparationConfig,CallbackPreparationConfig
