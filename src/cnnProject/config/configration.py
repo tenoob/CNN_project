@@ -1,6 +1,7 @@
 from cnnProject.constant import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from cnnProject.utils import read_yaml, create_directories
-from cnnProject.entity import DataIngestionConfig , BaseModelPreparationConfig
+import os
+from cnnProject.entity import DataIngestionConfig , BaseModelPreparationConfig,CallbackPreparationConfig
 from pathlib import Path
 
 
@@ -43,3 +44,20 @@ class ConfigrationManger:
         )
 
         return base_model_prepare_config
+
+    def get_callback_perparation_config(self) -> CallbackPreparationConfig :
+        config = self.config.callback_preparation
+
+        model_checkpoint_dir = os.path.dirname(config.checkpoint_model_filepath)
+        create_directories([
+            Path(config.tensorboard_root_log_dir),
+            Path(model_checkpoint_dir)
+        ])
+
+        callback_prepare_config = CallbackPreparationConfig(
+            root_dir = Path(config.root_dir),
+            tensorboard_root_log_dir = Path(config.tensorboard_root_log_dir),
+            checkpoint_model_filepath = Path(config.checkpoint_model_filepath)
+        )
+
+        return callback_prepare_config
