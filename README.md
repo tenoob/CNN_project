@@ -21,3 +21,14 @@ commands
 9.  run tox for testing your package
 10. Update the dvc.yaml
 11. run "dvc repro" for running all the stages in pipeline
+
+
+#what dvc does?
+it has stages(stages) and in each stage there are commands(cmd) and dependencies(deps) which generate some output(outs) 
+
+during first use do *dvc init* to iitialize dvc
+then it will creage a .dvcignore and .dvcyaml 
+
+for next time execution - dvc repro
+
+dvc dag ->cmd to view how the stages and deps are connected
