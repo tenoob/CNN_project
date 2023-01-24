@@ -138,3 +138,4 @@ artifacts/
 artifacts/base_model_preparation
 artifacts/base_model_preparation/base_model.h5
 artifacts/base_model_preparation/base_model_updated.h5
+artifacts/base_model_preparation/base_model_updated.h5

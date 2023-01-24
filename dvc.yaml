@@ -6,4 +6,33 @@ stages:
       - configrationfile/config.yaml
     outs:
       - artifacts/data_ingestion/PetImages
-      
+  
+  base_mode_preparation:
+    cmd: python src/cnnProject/pipeline/stage_2_base_model_preparation.py
+    deps:
+      - src/cnnProject/pipeline/stage_2_base_model_preparation.py
+      - configrationfile/config.yaml
+    params:
+      - IMAGE_SIZE
+      - INCLUDE_TOP
+      - CLASSES
+      - WEIGHTS
+      - LEARNING_RATE
+    outs:
+      - artifacts/base_model_preparation
+  
+  training:
+    cmd: python src/cnnProject/pipeline/stage_3_training.py
+    deps:
+      - src/cnnProject/pipeline/stage_3_training.py
+      - src/cnnProject/componets/callback_preparation.py
+      - artifacts/data_ingestion/PetImages
+      - artifacts/base_model_preparation
+    params:
+      - IMAGE_SIZE
+      - EPOCHS
+      - BATCH_SIZE
+      - AUGMENTAION
+    outs:
+      - artifacts/training
+

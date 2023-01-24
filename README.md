@@ -32,3 +32,5 @@ then it will creage a .dvcignore and .dvcyaml
 for next time execution - dvc repro
 
 dvc dag ->cmd to view how the stages and deps are connected
+
+params in dvc are taken from entity for each dataclass
