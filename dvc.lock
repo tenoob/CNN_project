@@ -14,3 +14,27 @@ stages:
       md5: 3a5cf86541f22c236620ce5b952ad684.dir
       size: 848866410
       nfiles: 24998
+  base_mode_preparation:
+    cmd: python src/cnnProject/pipeline/stage_2_base_model_preparation.py
+    deps:
+    - path: configrationfile/config.yaml
+      md5: 92f374b30154a864dc77e89f0a33b2f1
+      size: 859
+    - path: src/cnnProject/pipeline/stage_2_base_model_preparation.py
+      md5: 52695ce67a7ec8ec207e80ba68d3b6d2
+      size: 756
+    params:
+      params.yaml:
+        CLASSES: 2
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+        INCLUDE_TOP: false
+        LEARNING_RATE: 0.01
+        WEIGHTS: imagenet
+    outs:
+    - path: artifacts/base_model_preparation
+      md5: 158657ee952de18197ef0109d800a021.dir
+      size: 118054512
+      nfiles: 2
