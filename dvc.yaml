@@ -3,7 +3,7 @@ stages:
     cmd: python src/cnnProject/pipeline/stage_1_data_ingestion.py
     deps: 
       - src/cnnProject/pipeline/stage_1_data_ingestion.py
-      - configrationfile/config.yaml
+      - Configrationfile/config.yaml
     outs:
       - artifacts/data_ingestion/PetImages
   
@@ -11,7 +11,7 @@ stages:
     cmd: python src/cnnProject/pipeline/stage_2_base_model_preparation.py
     deps:
       - src/cnnProject/pipeline/stage_2_base_model_preparation.py
-      - configrationfile/config.yaml
+      - Configrationfile/config.yaml
     params:
       - IMAGE_SIZE
       - INCLUDE_TOP
