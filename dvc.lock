@@ -38,3 +38,34 @@ stages:
       md5: 5ddefbe92c91cbca4fc5c0a4f5c2ee8b.dir
       size: 118054512
       nfiles: 2
+  training:
+    cmd: python src/cnnProject/pipeline/stage_3_training.py
+    deps:
+    - path: artifacts/base_model_preparation
+      md5: 5ddefbe92c91cbca4fc5c0a4f5c2ee8b.dir
+      size: 118054512
+      nfiles: 2
+    - path: artifacts/data_ingestion/PetImages
+      md5: 3a5cf86541f22c236620ce5b952ad684.dir
+      size: 848866410
+      nfiles: 24998
+    - path: src/cnnProject/componets/callback_preparation.py
+      md5: ed8169b5c95d99a50ba25641184a60e7
+      size: 1028
+    - path: src/cnnProject/pipeline/stage_3_training.py
+      md5: 0548c86b9b3148f14feeee15f2bbf732
+      size: 1142
+    params:
+      params.yaml:
+        AUGMENTAION: true
+        BATCH_SIZE: 64
+        EPOCHS: 1
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: artifacts/training
+      md5: f1686b52b8a18b47cd729a41f664ca93.dir
+      size: 59337488
+      nfiles: 1
