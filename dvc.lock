@@ -69,3 +69,30 @@ stages:
       md5: f1686b52b8a18b47cd729a41f664ca93.dir
       size: 59337488
       nfiles: 1
+  evaluation:
+    cmd: python src/cnnProject/pipeline/stage_4_evaluation.py
+    deps:
+    - path: Configrationfile/config.yaml
+      md5: 92f374b30154a864dc77e89f0a33b2f1
+      size: 859
+    - path: artifacts/data_ingestion/PetImages
+      md5: 3a5cf86541f22c236620ce5b952ad684.dir
+      size: 848866410
+      nfiles: 24998
+    - path: artifacts/training/model.h5
+      md5: 60abd5a2e80f5bdccc3ddbbeeb756c71
+      size: 59337488
+    - path: src/cnnProject/pipeline/stage_4_evaluation.py
+      md5: d3e219f0d83423bee0d4222ac4fa703d
+      size: 643
+    params:
+      params.yaml:
+        BATCH_SIZE: 64
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: scores.json
+      md5: b20fa11da3bf9690723e773d3bc5c048
+      size: 71

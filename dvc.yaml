@@ -36,3 +36,16 @@ stages:
     outs:
       - artifacts/training
 
+  evaluation:
+    cmd: python src/cnnProject/pipeline/stage_4_evaluation.py
+    deps:
+      - src/cnnProject/pipeline/stage_4_evaluation.py
+      - Configrationfile/config.yaml
+      - artifacts/data_ingestion/PetImages
+      - artifacts/training/model.h5
+    params:
+      - IMAGE_SIZE
+      - BATCH_SIZE
+    metrics:
+      - scores.json:
+          cache: false
