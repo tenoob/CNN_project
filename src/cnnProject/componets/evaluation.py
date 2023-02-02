@@ -12,7 +12,7 @@ class Evaluation:
     def _valid_generator(self):
         # will be doing augmentation
 
-        datagenerator_kwargs = dict(rescale=1.0 / 255, validation_split=0.30)
+        datagenerator_kwargs = dict(rescale=1.0 / 255, validation_split=0.10)
 
         dataflow_kwargs = dict(
             target_size=self.config.params_image_size[
