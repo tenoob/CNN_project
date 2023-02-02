@@ -3,4 +3,5 @@ from cnnProject.entity.config_entity import (
     BaseModelPreparationConfig,
     CallbackPreparationConfig,
     TrainingConfig,
+    EvaluationConfig,
 )
