@@ -24,7 +24,7 @@ commands
 
 # DVC (Data Version Control)
 
-#what dvc does?
+what dvc does?
 it has stages(stages) and in each stage there are commands(cmd) and dependencies(deps) which generate some output(outs) 
 
 *DVC is built to assist mlops in handling large files, data sets, machine learning models, and metrics. It is commonly used to make machine learning experiments reproducible*
@@ -40,4 +40,7 @@ dvc dag ->cmd to view how the stages and deps are connected
 params in dvc are taken from entity for each dataclass
 
 # DagsHub
+
+DAGsHub is similar to GitHub which assists data scientists and machine learning engineers in sharing the data, models, experiments, and code. It allows you and your team to easily share, review, and reuse your work, providing a GitHub experience for machine learning.
+
 *it comes with experiments, mlflow integration, machine learning pipeline visualization, performance metrics comparison, and visualizations.*
