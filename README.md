@@ -1,4 +1,4 @@
-#CNN project
+# CNN project
 python 3.7
 dlenv
 commands 
@@ -8,7 +8,7 @@ commands
     - to rerun tox if new packages are added to requirements (tox --recreate)
 
 
-##workflow
+## workflow
 
 1.  Update config.yaml -> Configrationfile
 2.  Update secrets.yaml (not used in this project)
@@ -22,7 +22,7 @@ commands
 10. Update the dvc.yaml
 11. run "dvc repro" for running all the stages in pipeline
 
-#DVC (Data Version Control)
+# DVC (Data Version Control)
 
 #what dvc does?
 it has stages(stages) and in each stage there are commands(cmd) and dependencies(deps) which generate some output(outs) 
@@ -39,5 +39,5 @@ dvc dag ->cmd to view how the stages and deps are connected
 
 params in dvc are taken from entity for each dataclass
 
-#DagsHub
+# DagsHub
 *it comes with experiments, mlflow integration, machine learning pipeline visualization, performance metrics comparison, and visualizations.*
