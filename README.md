@@ -22,9 +22,13 @@ commands
 10. Update the dvc.yaml
 11. run "dvc repro" for running all the stages in pipeline
 
+#DVC (Data Version Control)
 
 #what dvc does?
 it has stages(stages) and in each stage there are commands(cmd) and dependencies(deps) which generate some output(outs) 
+
+*DVC is built to assist mlops in handling large files, data sets, machine learning models, and metrics. It is commonly used to make machine learning experiments reproducible*
+
 
 during first use do *dvc init* to iitialize dvc
 then it will creage a .dvcignore and .dvcyaml 
@@ -34,3 +38,6 @@ for next time execution - dvc repro
 dvc dag ->cmd to view how the stages and deps are connected
 
 params in dvc are taken from entity for each dataclass
+
+#DagsHub
+*it comes with experiments, mlflow integration, machine learning pipeline visualization, performance metrics comparison, and visualizations.*
