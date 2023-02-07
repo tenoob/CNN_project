@@ -1,6 +1,6 @@
 # CNN project
 python 3.7
-dlenv
+10sept
 commands 
     - for settingup test env (bash init_setup.sh)
     - to run pytest (pytest -v)
