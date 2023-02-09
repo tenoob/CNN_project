@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/ineuron/DL_project/CNN_project/experiment/mlflow/mlruns/0/2eecd6e4c1094cf49e702ed5d117d892/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2eecd6e4c1094cf49e702ed5d117d892
+run_name: sassy-stork-722
+run_uuid: 2eecd6e4c1094cf49e702ed5d117d892
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675971629516
+status: 1
+tags: []
+user_id: kanan
