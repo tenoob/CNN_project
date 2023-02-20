@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/ineuron/DL_project/CNN_project/experiment/mlflow/mlruns/0/392a966fe8014438b292bc0d62531ece/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 392a966fe8014438b292bc0d62531ece
+run_name: brawny-flea-597
+run_uuid: 392a966fe8014438b292bc0d62531ece
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1676919757672
+status: 1
+tags: []
+user_id: kanan
