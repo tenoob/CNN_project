@@ -12,7 +12,7 @@ tqdm
 ensure==1.0.2
 joblib
 scipy
-mlflow
+mlflow==1.26.1
 -e .
 
 pytest==7.1.3
