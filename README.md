@@ -46,3 +46,20 @@ DAGsHub is similar to GitHub which assists data scientists and machine learning 
 *it comes with experiments, mlflow integration, machine learning pipeline visualization, performance metrics comparison, and visualizations.*
 
 # MLflow
+
+to see the ui -> mlflow ui
+or we can run the mlflow server which will run all the training in db instead of file based system
+
+cmd (try running in bash unable to run in cmd for me)
+
+mlflow server \
+--backend-store-uri sqlite:///mlflow.db \
+--default-artifact-root ./artifacts \
+--host 127.0.0.1 -p 1234
+
+or can use dagshub
+
+MLFLOW_TRACKING_URI=https://dagshub.com/tenoob/CNN_project.mlflow \
+MLFLOW_TRACKING_USERNAME=tenoob \
+MLFLOW_TRACKING_PASSWORD=<> \
+python script.py
