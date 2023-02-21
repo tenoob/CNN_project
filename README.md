@@ -63,3 +63,4 @@ MLFLOW_TRACKING_URI=https://dagshub.com/tenoob/CNN_project.mlflow \
 MLFLOW_TRACKING_USERNAME=tenoob \
 MLFLOW_TRACKING_PASSWORD=<> \
 python script.py
+
