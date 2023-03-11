@@ -64,3 +64,7 @@ MLFLOW_TRACKING_USERNAME=tenoob \
 MLFLOW_TRACKING_PASSWORD=<> \
 python script.py
 
+# Streamlit
+
+Used for creating an UI and deploying the model there 
+to run streamlit app -> streamlit run app.py
