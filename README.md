@@ -68,3 +68,8 @@ python script.py
 
 Used for creating an UI and deploying the model there 
 to run streamlit app -> streamlit run app.py
+
+
+# DOcker
+cmd to create an image -> docker build -t name .
+cmd to rum an image -> docker run -dp 8501:8501 container_name  
