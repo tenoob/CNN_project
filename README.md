@@ -71,7 +71,7 @@ to run streamlit app -> streamlit run app.py
 
 
 # DOcker
-cmd to create an image -> docker build -t name .
+cmd to create an image -> docker build -t name . <br>
 cmd to rum an image -> docker run -p 8501:8501 container_name  
 
 <br>
