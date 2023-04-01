@@ -76,3 +76,6 @@ cmd to rum an image -> docker run -p 8501:8501 container_name
 
 <br>
 ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
+<br>
+(help for docker)[https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker#check-network-port-accessibility]
